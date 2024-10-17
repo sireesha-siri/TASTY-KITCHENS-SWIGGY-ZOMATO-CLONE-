@@ -1,0 +1,135 @@
+/* General Navigation Bar Styles */
+.nav_bar {
+  display: flex;
+  height: 60px;
+  justify-content: space-between;
+  background: #f8fafc;
+  position: fixed;
+  top: 0;
+  align-items: center;
+  padding: 9px 16px;
+  width: 100%;
+  z-index: 1;
+  border-bottom: 1px solid #ccc;
+}
+
+sup {
+  background-color: #f7931e; /* Keep the bright color for emphasis */
+  color: black;
+  border-radius: 5px; /* Smaller, more subtle rounding */
+  padding: 2px 5px; /* Balanced padding for better readability */
+  font-size: 0.75em; /* Slightly smaller to align with superscript style */
+  line-height: 1; /* Consistent spacing */
+  vertical-align: top; /* Aligns well with regular text */
+  font-weight: bold; /* Adds emphasis */
+}
+
+.logo_container {
+  display: flex;
+  align-items: center;
+}
+
+.logo_image {
+  width: 45px;
+  height: 40px;
+  margin-right: 6px;
+}
+
+.main_heading {
+  font-family: 'DM Sans';
+  font-size: 20px;
+  font-weight: 900;
+  color: #f7931e;
+  text-decoration: none;
+}
+
+.nav_link {
+  text-decoration: none;
+  color: #334155;
+  font-family: 'Roboto';
+  font-size: 20px;
+  font-weight: 600;
+  font-style: italic;
+  margin: 0 10px;
+}
+
+/* Desktop and Mobile Specific Styles */
+.desktop_nav_list,
+.mobile_nav_list {
+  list-style: none;
+  display: flex;
+  padding: 0;
+  margin: 0;
+  align-items: center;
+}
+
+.desktop_nav_list li {
+  margin: 0 1vw;
+}
+
+.logout_button {
+  height: 32px;
+  width: 73px;
+  border-radius: 8px;
+  background: #f7931e;
+  border: none;
+  color: #ffffff;
+  font-family: 'DM Sans';
+  font-weight: 600;
+  cursor: pointer;
+}
+
+/* Mobile Menu Icon */
+.hamburger_icon {
+  cursor: pointer;
+  display: none;
+}
+
+/* Media Queries */
+@media screen and (max-width: 767px) {
+  .navigation {
+    position: absolute;
+    top: 60px;
+    right: 0;
+    width: 50%;
+    background: #f8fafc;
+    box-shadow: 1px 1px 5px 2px #ccc;
+    border-radius: 0 0 6px 6px;
+    transition: width 0.5s;
+  }
+
+  .desktop_nav_list {
+    display: none;
+  }
+
+  .mobile_nav_list {
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    align-items: center;
+    padding: 0 25px;
+  }
+
+  .mobile_nav_list li {
+    margin: 6px 0;
+  }
+
+  .hamburger_icon {
+    display: block;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .mobile_nav_list {
+    display: none;
+  }
+
+  .hamburger_icon {
+    display: none;
+  }
+}
+
+.nav_link.active {
+  color: #f7931e; /* Replace with your desired color */
+  font-weight: bold;
+}
